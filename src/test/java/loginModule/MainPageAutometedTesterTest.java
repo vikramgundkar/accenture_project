@@ -32,6 +32,8 @@ public class MainPageAutometedTesterTest extends Base{
 		//main.DeclineCookiesButton().click();
 		main.AcceptCookiesButton().click();
 	Thread.sleep(15000);
+		System.out.println("OK");
+		
 	
 	
 	
