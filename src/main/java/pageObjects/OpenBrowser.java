@@ -1,0 +1,39 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class OpenBrowser {
+	
+	
+	public WebDriver driver;
+	
+	
+	
+	
+	
+	By serachFoodTextbox= By.xpath("//input[@placeholder='Search for restaurant, cuisine or a dish']");
+	
+	
+	 
+	public OpenBrowser(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+
+
+
+	public WebElement SerachFoodTextbox() {
+		
+		return driver.findElement(serachFoodTextbox);
+		
+	}
+	
+	@FindBy(xpath="//input[@placeholder='Search for restaurant, cuisine or a dish']")
+	WebElement foodTextbox;
+	
+
+}
